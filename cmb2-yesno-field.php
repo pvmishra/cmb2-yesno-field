@@ -28,20 +28,11 @@ class Own_Field_yesno {
 		$attributes = $field->args( 'attributes' );
 		$dataon  = $attributes['data-on'] ? $attributes['data-on'] : "ON";
 		$dataoff  = $attributes['data-off'] ? $attributes['data-off'] : "OFF";
-		//$onlable = $onlable = $field->args['attributes'] ? $field->args['attributes'] : "On"; ? $field->args['attributes'] : "On";
-		//$offlable = $field->args['attributes'] ? $field->args['attributes'] : "On";
 		
 		$checked = ($field_escaped_value=='on')?'checked="checked"':'';
 
 		echo '<div class="onoffswitch">';
 		echo '<input type="checkbox" class="own-yesno-field-value onoffswitch-checkbox" id="'. $field->args( 'id' ) .'" name="'. $field->args( 'id' ) .'" value="on" '. $checked .' >';
-
-		/*echo $field_type_object->input( array(
-			'type'       => 'checkbox',
-			'class'      => 'own-yesno-field-value onoffswitch-checkbox',
-			'desc'       => '',
-			'value'		=> 'on' ,
-		) ); */
 
 		echo '<label class="onoffswitch-label" for="'.$field->args( 'id' ).'">
         <span class="onoffswitch-inner" data-label="'. $dataoff .'"></span>
